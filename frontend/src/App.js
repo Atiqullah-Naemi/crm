@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import store from './store'
+import Header from './components/layout/Header'
+import Clients from './components/clients/Clients'
 
 class App extends Component {
     render() {
         return (
-        	<h1>App</h1>
+        	<Provider store={store}>
+        		<Header />
+        		<Clients />
+        	</Provider>
         )
     }
 }
